@@ -1,0 +1,18 @@
+#include "../core-simulador-hpp/ArmaDefesa.hpp"
+#include "../acessorios-hpp/Armadura.hpp"
+
+Armadura::Armadura(string descricaoArma, int resistencia)
+:ArmaDefesa(descricaoArma, resistencia)
+{
+
+}
+
+string Armadura::getDescricaoArma()
+{
+    return descricaoArma;
+}
+
+int Armadura::getResistencia()
+{
+    return resistencia;
+}
