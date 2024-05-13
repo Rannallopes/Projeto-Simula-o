@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <random>
 #include "../core-simulador-hpp/Simulador.hpp"
 #include "../core-simulador-hpp/Personagem.hpp"
 
@@ -67,27 +68,28 @@ int Simulador::calcularVidaEquipe(int seletorDeEquipe)
     return soma;
 }
 
+
 Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
 {
+    
     int tamanho = equipe.size();
     if (tamanho == 0)
     {
         return nullptr;
     }
 
-    int contador = 0;
-    while (contador < tamanho)
-    {
-        if (equipe[contador]->getVida()>0)
-        {
-            return equipe[contador];
-        }
-        contador++;
+    int indiceAleatorio;
+    Personagem* personagemSelecionado;
 
-    }
+    // Continue gerando um índice aleatório até encontrar um personagem com vida maior que zero
+    do {
+        indiceAleatorio = std::rand() % tamanho; // Gera um índice aleatório
+        personagemSelecionado = equipe[indiceAleatorio]; // Seleciona o personagem no índice aleatório
+    } while (personagemSelecionado->getVida() <= 0);
 
-    return nullptr;
+    return personagemSelecionado; // Retorna o personagem selecionado
 }
+
 
 int Simulador::criarCombate(Personagem* personagem1, Personagem* personagem2)
 {

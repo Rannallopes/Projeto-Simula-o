@@ -41,15 +41,15 @@ int main()
     ArmaDefesa* peleGama = new PeleDeGama("Pele de Gama", 50);
     ArmaAtaque* lanca = new Lanca("Lança afiada", 10, 35);
     
-    Personagem* p1 = new Chaves(1, "Chaves Eq1", 10, arma, escudo);
+    Personagem* p1 = new Chaves(2, "Chaves Eq1", 10, arma, escudo);
     Personagem* p3 = new Chaves(1, "Chaves Eq1 - Reserva", 15, arma, escudo);
     Personagem* p2 = new Chaves(2, "Chaves Eq2", 15, arma, escudo);
-    Personagem* p4 = new Chaves(2, "Chaves Eq2 - Reserva", 20, arma, escudo);
-    Personagem* p5 = new Hulk(1, "Hulk", 30, machado, armadura);
-    Personagem* p6 = new CapitaoAmerica(2, "Capitão América", 35, adaga, armadura);
-    Personagem* p7 = new HomemDeFerro(1, "Homem de Ferro", 55, adaga, capacete);
-    Personagem* p8 = new Thor(2, "Thor", 75, lanca, escudoAco);
-    Personagem* p9 = new ViuvaNegra(1, "Viúva Negra", 65, arco, barreiraGelo);
+    Personagem* p4 = new Chaves(1, "Chaves Eq2 - Reserva", 20, arma, escudo);
+    Personagem* p5 = new Hulk(2, "Hulk", 30, machado, armadura);
+    Personagem* p6 = new CapitaoAmerica(1, "Capitão América", 35, adaga, armadura);
+    Personagem* p7 = new HomemDeFerro(2, "Homem de Ferro", 55, espada, capacete);
+    Personagem* p8 = new Thor(1, "Thor", 75, lanca, escudoAco);
+    Personagem* p9 = new ViuvaNegra(2, "Viúva Negra", 65, arco, barreiraGelo);
 
 
     Simulador* simulador = new Simulador();
